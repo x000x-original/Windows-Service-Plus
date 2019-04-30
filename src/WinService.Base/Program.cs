@@ -1,19 +1,14 @@
-﻿using Common.Logging;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Topshelf;
 using Topshelf.Common.Logging;
 using Topshelf.Ninject;
 
 namespace WinService.Base
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
 
             // This will ensure that future calls to Directory.GetCurrentDirectory()
