@@ -1,14 +1,10 @@
 ﻿using Common.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Topshelf;
 
 namespace WinService.Base.Service
 {
-    class WinService 
+    internal class WinService 
     {
 
         public ILog Log { get; private set; }
@@ -28,9 +24,9 @@ namespace WinService.Base.Service
     public bool Start(HostControl hostControl)
     {   
                      
-        Log.Info($"{nameof(Service.WinService)} Start command received.");
+        Log.Info($"{nameof(WinService)} Start command received.");
 
-        Console.WriteLine("My first windows servce");
+        Console.WriteLine("My first windows service");
             
         return true;
 
@@ -39,7 +35,7 @@ namespace WinService.Base.Service
         public bool Stop(HostControl hostControl)
         {
 
-            Log.Trace($"{nameof(Service.WinService)} Stop command received.");
+            Log.Trace($"{nameof(WinService)} Stop command received.");
 
             //TODO: Implement your service stop routine.
             return true;
@@ -49,7 +45,7 @@ namespace WinService.Base.Service
         public bool Pause(HostControl hostControl)
         {
 
-            Log.Trace($"{nameof(Service.WinService)} Pause command received.");
+            Log.Trace($"{nameof(WinService)} Pause command received.");
 
             //TODO: Implement your service start routine.
             return true;
@@ -59,7 +55,7 @@ namespace WinService.Base.Service
         public bool Continue(HostControl hostControl)
         {
 
-            Log.Trace($"{nameof(Service.WinService)} Continue command received.");
+            Log.Trace($"{nameof(WinService)} Continue command received.");
 
             //TODO: Implement your service stop routine.
             return true;
@@ -69,7 +65,7 @@ namespace WinService.Base.Service
         public bool Shutdown(HostControl hostControl)
         {
 
-            Log.Trace($"{nameof(Service.WinService)} Shutdown command received.");
+            Log.Trace($"{nameof(WinService)} Shutdown command received.");
 
             //TODO: Implement your service stop routine.
             return true;
