@@ -9,7 +9,7 @@ namespace $safeprojectname$
 
             Bind<ILog>().ToMethod(ctx =>
             {
-                Type type = ctx.Request.ParentContext?.Request.Service;
+                var type = ctx.Request.ParentContext?.Request.Service;
                 return LogManager.GetLogger(type);
             });
 
