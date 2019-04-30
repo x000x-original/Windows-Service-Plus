@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using Topshelf;
 using Topshelf.Common.Logging;
@@ -8,6 +9,7 @@ namespace WinService.Base
 {
     internal class Program
     {
+        [SuppressMessage("ReSharper", "UnusedParameter.Local")]
         private static void Main(string[] args)
         {
 
